@@ -1,0 +1,81 @@
+---
+import { hero, site } from '../data/site';
+---
+
+<section id="inicio" class="hero">
+	<div class="container">
+		<p class="prompt">$ whoami</p>
+		<h1>{hero.greeting} <span class="name">{site.name}</span></h1>
+		<p class="role" data-roles={JSON.stringify(hero.roles)}>
+			<span class="typed">{hero.roles[0]}</span><span class="caret">|</span>
+		</p>
+		<p class="intro">{hero.intro}</p>
+		<ul class="profiles">
+			{hero.profiles.map((p) => (
+				<li><span class="ico">{p.icon}</span>{p.label}</li>
+			))}
+		</ul>
+		<div class="actions">
+			<a class="btn btn-primary" href="#proyectos">{hero.cta.projects}</a>
+			<a class="btn btn-ghost" href="#contacto">{hero.cta.contact}</a>
+		</div>
+	</div>
+</section>
+
+<style>
+	.hero {
+		min-height: 100svh;
+		display: flex;
+		align-items: center;
+		padding: calc(var(--nav-h) + 2rem) 0 4rem;
+		background:
+			radial-gradient(circle at 80% 20%, rgba(34, 224, 122, 0.08), transparent 45%),
+			linear-gradient(var(--bg), var(--bg));
+	}
+	.prompt { font-family: var(--mono); color: var(--accent); margin-bottom: 1rem; }
+	h1 { font-size: clamp(2.4rem, 8vw, 4.5rem); color: #fff; }
+	.name { color: var(--accent); }
+	.role {
+		font-family: var(--mono);
+		font-size: clamp(1.1rem, 3.5vw, 1.8rem);
+		margin: 1rem 0 1.5rem;
+		min-height: 1.5em;
+	}
+	.caret { color: var(--accent); animation: blink 0.9s steps(1) infinite; }
+	.intro { max-width: 56ch; color: var(--muted); font-size: 1.1rem; }
+	.profiles { display: flex; flex-wrap: wrap; gap: 0.75rem; margin: 2rem 0; }
+	.profiles li {
+		font-family: var(--mono);
+		font-size: 0.85rem;
+		padding: 0.5rem 0.9rem;
+		border: 1px solid var(--border);
+		background: var(--surface);
+		border-radius: 999px;
+	}
+	.ico { color: var(--accent); margin-right: 0.5rem; }
+	.actions { display: flex; flex-wrap: wrap; gap: 1rem; }
+	@keyframes blink { 50% { opacity: 0; } }
+</style>
+
+<script>
+	const el = document.querySelector<HTMLElement>('.role');
+	const out = el?.querySelector<HTMLElement>('.typed');
+	if (el && out) {
+		const roles: string[] = JSON.parse(el.dataset.roles ?? '[]');
+		const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+		if (!reduce && roles.length) {
+			let r = 0, i = 0, deleting = false;
+			const tick = () => {
+				const word = roles[r];
+				i += deleting ? -1 : 1;
+				out.textContent = word.slice(0, i);
+				let delay = deleting ? 40 : 80;
+				if (!deleting && i === word.length) { deleting = true; delay = 1600; }
+				else if (deleting && i === 0) { deleting = false; r = (r + 1) % roles.length; delay = 400; }
+				setTimeout(tick, delay);
+			};
+			out.textContent = '';
+			tick();
+		}
+	}
+</script>

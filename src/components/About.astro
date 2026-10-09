@@ -1,0 +1,39 @@
+---
+import { about } from '../data/site';
+---
+
+<section id="sobre-mi" class="section">
+	<div class="container">
+		<h2 class="section-title reveal">{about.title}</h2>
+		<div class="grid">
+			<div class="text reveal">
+				{about.paragraphs.map((p) => <p set:html={p.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')} />)}
+			</div>
+			<dl class="facts reveal">
+				{about.facts.map((f) => (
+					<div><dt>{f.label}</dt><dd>{f.value}</dd></div>
+				))}
+			</dl>
+		</div>
+	</div>
+</section>
+
+<style>
+	.grid { display: grid; gap: 2.5rem; grid-template-columns: 1.6fr 1fr; align-items: start; }
+	.text p { color: var(--muted); font-size: 1.05rem; }
+	.text :global(strong) { color: var(--accent); font-weight: 600; }
+	.facts {
+		margin: 0;
+		padding: 1.5rem;
+		background: var(--surface);
+		border: 1px solid var(--border);
+		border-radius: 10px;
+		font-family: var(--mono);
+		font-size: 0.9rem;
+		display: grid;
+		gap: 1rem;
+	}
+	dt { color: var(--accent); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; }
+	dd { margin: 0.2rem 0 0; }
+	@media (max-width: 760px) { .grid { grid-template-columns: 1fr; } }
+</style>

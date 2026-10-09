@@ -1,0 +1,25 @@
+---
+import { contact, site } from '../data/site';
+---
+
+<section id="contacto" class="section alt">
+	<div class="container center">
+		<h2 class="section-title reveal">{contact.title}</h2>
+		<p class="reveal">{contact.text}</p>
+		<a class="btn btn-primary reveal" href={`mailto:${site.email}`}>{site.email}</a>
+		<ul class="socials reveal">
+			{contact.socials.map((s) => (
+				<li><a href={s.href} target="_blank" rel="noopener noreferrer">{s.label} ↗</a></li>
+			))}
+		</ul>
+	</div>
+</section>
+
+<style>
+	.alt { background: var(--surface); border-top: 1px solid var(--border); }
+	.center { text-align: center; }
+	p { color: var(--muted); max-width: 50ch; margin: 0 auto 2rem; }
+	.btn { word-break: break-all; }
+	.socials { display: flex; justify-content: center; flex-wrap: wrap; gap: 1.75rem; margin-top: 2rem; font-family: var(--mono); }
+	.socials a:hover { text-decoration: underline; }
+</style>

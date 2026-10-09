@@ -1,0 +1,36 @@
+---
+import { skills } from '../data/site';
+---
+
+<section id="skills" class="section alt">
+	<div class="container">
+		<h2 class="section-title reveal">{skills.title}</h2>
+		<div class="grid">
+			{skills.groups.map((g, i) => (
+				<article class="card reveal" style={`transition-delay:${i * 100}ms`}>
+					<h3><span class="ico">{g.icon}</span>{g.name}</h3>
+					<ul>
+						{g.items.map((it) => <li>{it}</li>)}
+					</ul>
+				</article>
+			))}
+		</div>
+	</div>
+</section>
+
+<style>
+	.alt { background: var(--surface); border-block: 1px solid var(--border); }
+	.grid { display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+	.card {
+		background: var(--bg);
+		border: 1px solid var(--border);
+		border-radius: 10px;
+		padding: 1.75rem;
+		transition: border-color 0.25s, transform 0.7s ease, opacity 0.7s ease;
+	}
+	.card:hover { border-color: var(--accent); }
+	h3 { font-size: 1.1rem; margin-bottom: 1.25rem; color: #fff; }
+	.ico { color: var(--accent); margin-right: 0.6rem; }
+	li { display: flex; gap: 0.6rem; padding: 0.35rem 0; color: var(--muted); font-size: 0.95rem; }
+	li::before { content: '▹'; color: var(--accent); }
+</style>

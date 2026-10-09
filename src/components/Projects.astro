@@ -1,0 +1,51 @@
+---
+import { projects } from '../data/site';
+---
+
+<section id="proyectos" class="section">
+	<div class="container">
+		<h2 class="section-title reveal">{projects.title}</h2>
+		<div class="grid">
+			{projects.items.map((p, i) => (
+				<article class="card reveal" style={`transition-delay:${i * 100}ms`}>
+					<h3>{p.name}</h3>
+					<p>{p.description}</p>
+					<ul class="tags">
+						{p.tags.map((t) => <li>{t}</li>)}
+					</ul>
+					<div class="links">
+						{p.code && <a href={p.code} target="_blank" rel="noopener noreferrer">{projects.labels.code} ↗</a>}
+						{p.demo && <a href={p.demo} target="_blank" rel="noopener noreferrer">{projects.labels.demo} ↗</a>}
+					</div>
+				</article>
+			))}
+		</div>
+	</div>
+</section>
+
+<style>
+	.grid { display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+	.card {
+		display: flex;
+		flex-direction: column;
+		background: var(--surface);
+		border: 1px solid var(--border);
+		border-radius: 10px;
+		padding: 1.75rem;
+		transition: border-color 0.25s, box-shadow 0.25s, transform 0.7s ease, opacity 0.7s ease;
+	}
+	.card:hover { border-color: var(--accent); box-shadow: 0 8px 30px rgba(34, 224, 122, 0.08); }
+	h3 { font-size: 1.25rem; color: #fff; margin-bottom: 0.75rem; }
+	p { color: var(--muted); flex: 1; }
+	.tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.25rem; }
+	.tags li {
+		font-family: var(--mono);
+		font-size: 0.75rem;
+		color: var(--accent);
+		background: var(--accent-dim);
+		padding: 0.2rem 0.6rem;
+		border-radius: 4px;
+	}
+	.links { display: flex; gap: 1.25rem; font-family: var(--mono); font-size: 0.9rem; }
+	.links a:hover { text-decoration: underline; }
+</style>
