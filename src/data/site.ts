@@ -90,7 +90,7 @@ export const education = {
       text: 'Desarrollo de aplicaciones móviles con Java, Kotlin y bases de datos MySQL. Lógica de programación, control de versiones con Git y proyectos prácticos.',
     },
     {
-      date: '2014 – 2026',
+      date: '2014 – abril 2026',
       title: 'Jefe de cocina y formador interno',
       place: 'Restaurante La Mafia, Córdoba',
       text: 'Trabajo bajo procedimientos y estándares exigentes, además de formar al equipo.',
