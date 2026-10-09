@@ -8,6 +8,13 @@ import { projects } from '../data/site';
 		<div class="grid">
 			{projects.items.map((p, i) => (
 				<article class="card reveal" style={`transition-delay:${i * 100}ms`}>
+					{p.images && p.images.length > 0 && (
+						<div class="shots">
+							{p.images.map((img) => (
+								<img src={img.src} alt={img.alt} width="540" height="1174" loading="lazy" />
+							))}
+						</div>
+					)}
 					<h3>{p.name}</h3>
 					<p>{p.description}</p>
 					<ul class="tags">
@@ -35,6 +42,24 @@ import { projects } from '../data/site';
 		transition: border-color 0.25s, box-shadow 0.25s, transform 0.7s ease, opacity 0.7s ease;
 	}
 	.card:hover { border-color: var(--accent); box-shadow: 0 8px 30px rgba(34, 224, 122, 0.08); }
+	.shots {
+		display: flex;
+		gap: 0.75rem;
+		margin: -0.25rem -0.25rem 1.25rem;
+		padding: 0.25rem;
+		overflow-x: auto;
+		scroll-snap-type: x mandatory;
+	}
+	.shots img {
+		flex: 0 0 auto;
+		width: min(46%, 170px);
+		height: auto;
+		aspect-ratio: 540 / 1174;
+		object-fit: cover;
+		border-radius: 18px;
+		border: 3px solid #1b2a23;
+		scroll-snap-align: start;
+	}
 	h3 { font-size: 1.25rem; color: #fff; margin-bottom: 0.75rem; }
 	p { color: var(--muted); flex: 1; }
 	.tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.25rem; }

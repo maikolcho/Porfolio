@@ -1,5 +1,0 @@
-[  111818ms] [LOG] [vite] server connection lost. Polling for restart... @ http://localhost:4321/@vite/client:1828
-[  112106ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:4321/avatar.jpg:0
-[  112107ms] [ERROR] %cAstro background: linear-gradient(66.77deg, #D83333 0%, #F041FF 100%); color: white; padding-inline: 4px; border-radius: 2px; font-family: monospace; Error while running audit's match function: TypeError: Failed to fetch @ http://localhost:4321/node_modules/.vite/deps/astro_runtime_client_dev-toolbar_entrypoint__js.js?v=8a77e053:218
-[  113556ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:4321/avatar.jpg:0
-[  113557ms] [ERROR] %cAstro background: linear-gradient(66.77deg, #D83333 0%, #F041FF 100%); color: white; padding-inline: 4px; border-radius: 2px; font-family: monospace; Error while running audit's match function: TypeError: Failed to fetch @ http://localhost:4321/node_modules/.vite/deps/astro_runtime_client_dev-toolbar_entrypoint__js.js?v=8a77e053:218

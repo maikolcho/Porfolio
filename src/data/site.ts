@@ -121,6 +121,11 @@ export const projects = {
       description:
         'App iOS en SwiftUI que busca recetas a partir de los ingredientes disponibles usando una API de IA. Incluye filtros por categoría, recetas guardadas y creación de recetas propias.',
       tags: ['Swift', 'SwiftUI', 'iOS', 'IA'],
+      // Capturas: sube imágenes a public/proyectos/ y añade aquí { src, alt }
+      images: [
+        { src: '/proyectos/recipeia-1.jpg', alt: 'RecipeIA: pantalla de búsqueda por ingredientes' },
+        { src: '/proyectos/recipeia-2.jpg', alt: 'RecipeIA: pantalla de categorías' },
+      ],
       code: 'https://github.com/maikolcho/RecipeIA',
       demo: '',
     },
