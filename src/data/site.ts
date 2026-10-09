@@ -12,6 +12,7 @@ export const site = {
 export const nav = [
   { label: 'Sobre mí', href: '#sobre-mi' },
   { label: 'Skills', href: '#skills' },
+  { label: 'Formación', href: '#formacion' },
   { label: 'Proyectos', href: '#proyectos' },
   { label: 'Contacto', href: '#contacto' },
 ];
@@ -32,6 +33,8 @@ export const hero = {
 
 export const about = {
   title: 'Sobre mí',
+  photo: '/avatar.jpg',
+  photoAlt: 'Foto de Nelson',
   // Usa **texto** para resaltar en negrita
   paragraphs: [
     'Soy Nelson, desarrollador de software formado en **Programación de Aplicaciones Multiplataforma en MasterD**, con interés en el desarrollo de aplicaciones móviles, la inteligencia artificial y la innovación tecnológica.',
@@ -40,10 +43,11 @@ export const about = {
     'Me considero una persona curiosa, autodidacta y comprometida con la mejora continua. Disfruto investigando nuevas tecnologías, explorando ideas y convirtiéndolas en proyectos funcionales. Mi objetivo es seguir creciendo como profesional, participar en proyectos reales y combinar el desarrollo de software con las posibilidades que ofrecen la inteligencia artificial y la ciberseguridad.',
   ],
   facts: [
-    { label: 'Ubicación', value: 'España' },
+    { label: 'Ubicación', value: 'Córdoba, España' },
     { label: 'Enfoque', value: 'Desarrollo de software · Inteligencia artificial · Ciberseguridad' },
     { label: 'Tecnologías', value: 'Java · Kotlin · JavaScript · Python · MySQL · Git · GitHub' },
     { label: 'Formación actual', value: 'Ethical Hacking y ciberseguridad' },
+    { label: 'Idiomas', value: 'Español (nativo) · Inglés A2 · Portugués A2' },
   ],
 };
 
@@ -68,13 +72,44 @@ export const skills = {
   ],
 };
 
+export const education = {
+  title: 'Formación y experiencia',
+  items: [
+    {
+      date: '2025 – En curso',
+      title: 'Curso Superior en Ethical Hacking',
+      place: 'MasterD',
+      text: 'Ciberseguridad, análisis de vulnerabilidades, fundamentos de redes, sistemas operativos y metodologías de seguridad ofensiva en entornos controlados.',
+    },
+    {
+      date: '2022 – 2025',
+      title: 'Curso Superior en Programación de Aplicaciones para Dispositivos Móviles',
+      place: 'MasterD · 975 horas',
+      text: 'Desarrollo de aplicaciones móviles con Java, Kotlin y bases de datos MySQL. Lógica de programación, control de versiones con Git y proyectos prácticos.',
+    },
+    {
+      date: '2014 – 2026',
+      title: 'Jefe de cocina y formador interno',
+      place: 'Restaurante La Mafia, Córdoba',
+      text: 'Trabajo bajo procedimientos y estándares exigentes, además de formar al equipo.',
+    },
+    {
+      date: '2005',
+      title: 'Curso de Operador de PC',
+      place: '300 horas',
+      text: 'Base en soporte técnico, gestión de sistemas y resolución de incidencias.',
+    },
+  ],
+  note: 'Dispongo de 300 horas de prácticas formativas financiadas íntegramente por la academia, sin coste para la empresa.',
+};
+
 export const projects = {
   title: 'Proyectos',
   items: [
     {
       name: 'La Mafia',
       description:
-        'App Android para el sector restauración: carta digital, categorías de platos, reservas de mesa y acceso a plataformas de delivery (Glovo, Uber Eats, Just Eat).',
+        'App Android para el sector restauración, pensada para el restaurante La Mafia: carta digital, categorías de platos, reservas de mesa y acceso a plataformas de delivery (Glovo, Uber Eats, Just Eat).',
       tags: ['Java', 'Android Studio', 'Android'],
       code: 'https://github.com/maikolcho/La-Mafia',
       demo: '', // deja vacío si no hay demo

@@ -1,0 +1,48 @@
+---
+import { education } from '../data/site';
+---
+
+<section id="formacion" class="section">
+	<div class="container">
+		<h2 class="section-title reveal">{education.title}</h2>
+		<ol class="timeline">
+			{education.items.map((it) => (
+				<li class="item reveal">
+					<span class="date">{it.date}</span>
+					<h3>{it.title}</h3>
+					<p class="place">{it.place}</p>
+					<p>{it.text}</p>
+				</li>
+			))}
+		</ol>
+		<p class="note reveal">{education.note}</p>
+	</div>
+</section>
+
+<style>
+	.timeline { list-style: none; margin: 0; padding: 0 0 0 1.5rem; border-left: 1px solid var(--border); }
+	.item { position: relative; padding-bottom: 2.25rem; }
+	.item::before {
+		content: '';
+		position: absolute;
+		left: calc(-1.5rem - 5px);
+		top: 0.45rem;
+		width: 9px;
+		height: 9px;
+		border-radius: 50%;
+		background: var(--accent);
+		box-shadow: 0 0 10px rgba(34, 224, 122, 0.6);
+	}
+	.date { font-family: var(--mono); font-size: 0.8rem; color: var(--accent); }
+	h3 { font-size: 1.1rem; color: #fff; margin: 0.3rem 0; }
+	.place { color: var(--text); font-size: 0.9rem; margin-bottom: 0.4rem; }
+	.item p:last-child { color: var(--muted); margin: 0; }
+	.note {
+		margin-top: 1rem;
+		padding: 1rem 1.25rem;
+		border: 1px dashed var(--accent);
+		border-radius: 8px;
+		background: var(--accent-dim);
+		font-size: 0.95rem;
+	}
+</style>
