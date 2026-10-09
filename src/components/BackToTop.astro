@@ -1,0 +1,33 @@
+<a href="#inicio" class="top" aria-label="Volver arriba">↑</a>
+
+<style>
+	.top {
+		position: fixed;
+		right: max(1rem, env(safe-area-inset-right));
+		bottom: max(1rem, env(safe-area-inset-bottom));
+		z-index: 40;
+		width: 44px;
+		height: 44px;
+		display: grid;
+		place-items: center;
+		font-family: var(--mono);
+		font-size: 1.25rem;
+		color: var(--accent);
+		background: rgba(17, 24, 21, 0.9);
+		border: 1px solid var(--accent);
+		border-radius: 50%;
+		opacity: 0;
+		transform: translateY(12px);
+		pointer-events: none;
+		transition: opacity 0.25s, transform 0.25s, background 0.2s;
+	}
+	.top.show { opacity: 1; transform: none; pointer-events: auto; }
+	.top:hover { background: var(--accent-dim); }
+</style>
+
+<script>
+	const btn = document.querySelector('.top');
+	const update = () => btn?.classList.toggle('show', scrollY > 600);
+	addEventListener('scroll', update, { passive: true });
+	update();
+</script>

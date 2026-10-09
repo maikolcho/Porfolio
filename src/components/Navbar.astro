@@ -29,7 +29,7 @@ import { nav, site } from '../data/site';
 	.cursor { color: var(--accent); animation: blink 1s steps(1) infinite; }
 	.links { display: flex; gap: 1.75rem; }
 	.links a { color: var(--muted); font-size: 0.92rem; transition: color 0.2s; }
-	.links a:hover { color: var(--accent); }
+	.links a:hover, .links a.active { color: var(--accent); }
 	.toggle { display: none; background: none; border: 0; padding: 8px; cursor: pointer; }
 	.toggle span { display: block; width: 22px; height: 2px; background: var(--text); margin: 5px 0; transition: 0.25s; }
 	@keyframes blink { 50% { opacity: 0; } }
@@ -67,4 +67,19 @@ import { nav, site } from '../data/site';
 			toggle?.setAttribute('aria-expanded', 'false');
 		})
 	);
+
+	const links = [...document.querySelectorAll<HTMLAnchorElement>('#menu a')];
+	const sections = links
+		.map((a) => document.querySelector(a.getAttribute('href') ?? ''))
+		.filter((el): el is Element => !!el);
+	const spy = new IntersectionObserver(
+		(entries) => {
+			for (const e of entries) {
+				if (!e.isIntersecting) continue;
+				links.forEach((a) => a.classList.toggle('active', a.getAttribute('href') === '#' + e.target.id));
+			}
+		},
+		{ rootMargin: '-45% 0px -50% 0px' }
+	);
+	sections.forEach((el) => spy.observe(el));
 </script>
