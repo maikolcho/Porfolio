@@ -28,6 +28,8 @@ export const hero = {
     { icon: '▣', label: 'Operador de PC' },
     { icon: '⚿', label: 'Ciberseguridad' },
   ],
+  // Etiqueta de disponibilidad; pon '' para ocultarla
+  badge: 'Disponible para prácticas · 300 h financiadas',
   cta: { projects: 'Ver proyectos', contact: 'Contactar' },
 };
 
