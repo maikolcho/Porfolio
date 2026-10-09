@@ -3,7 +3,8 @@ import { hero, site } from '../data/site';
 ---
 
 <section id="inicio" class="hero">
-	<div class="container">
+	<canvas class="rain" aria-hidden="true"></canvas>
+	<div class="container content">
 		<p class="prompt">$ whoami</p>
 		<h1>{hero.greeting} <span class="name">{site.name}</span></h1>
 		<p class="role" data-roles={JSON.stringify(hero.roles)}>
@@ -24,6 +25,8 @@ import { hero, site } from '../data/site';
 
 <style>
 	.hero {
+		position: relative;
+		overflow: hidden;
 		min-height: 100svh;
 		display: flex;
 		align-items: center;
@@ -32,6 +35,15 @@ import { hero, site } from '../data/site';
 			radial-gradient(circle at 80% 20%, rgba(34, 224, 122, 0.08), transparent 45%),
 			linear-gradient(var(--bg), var(--bg));
 	}
+	.rain { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0.35; pointer-events: none; }
+	.hero::after {
+		content: '';
+		position: absolute;
+		inset: 0;
+		pointer-events: none;
+		background: radial-gradient(ellipse at 30% 50%, rgba(10, 14, 12, 0.85) 0%, rgba(10, 14, 12, 0.35) 70%);
+	}
+	.content { position: relative; z-index: 1; }
 	.prompt { font-family: var(--mono); color: var(--accent); margin-bottom: 1rem; }
 	h1 { font-size: clamp(2.4rem, 8vw, 4.5rem); color: #fff; }
 	.name { color: var(--accent); }
@@ -77,5 +89,44 @@ import { hero, site } from '../data/site';
 			out.textContent = '';
 			tick();
 		}
+	}
+</script>
+
+<script>
+	const canvas = document.querySelector<HTMLCanvasElement>('.rain');
+	const ctx = canvas?.getContext('2d');
+	if (canvas && ctx && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+		const chars = '01{}[]<>/;=$#ABCDEF';
+		const size = 16;
+		let cols = 0;
+		let drops: number[] = [];
+		let visible = true;
+		let last = 0;
+
+		const resize = () => {
+			canvas.width = canvas.clientWidth;
+			canvas.height = canvas.clientHeight;
+			cols = Math.ceil(canvas.width / size);
+			drops = Array.from({ length: cols }, () => Math.random() * -50);
+		};
+		resize();
+		addEventListener('resize', resize);
+		new IntersectionObserver(([e]) => (visible = e.isIntersecting)).observe(canvas);
+
+		const draw = (t: number) => {
+			requestAnimationFrame(draw);
+			if (!visible || t - last < 70) return;
+			last = t;
+			ctx.fillStyle = 'rgba(10, 14, 12, 0.12)';
+			ctx.fillRect(0, 0, canvas.width, canvas.height);
+			ctx.fillStyle = '#22e07a';
+			ctx.font = size + 'px "JetBrains Mono", monospace';
+			for (let i = 0; i < cols; i++) {
+				if (drops[i] > 0) ctx.fillText(chars[Math.floor(Math.random() * chars.length)], i * size, drops[i] * size);
+				if (drops[i] * size > canvas.height && Math.random() > 0.975) drops[i] = 0;
+				drops[i]++;
+			}
+		};
+		requestAnimationFrame(draw);
 	}
 </script>
