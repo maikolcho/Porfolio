@@ -93,7 +93,7 @@ export const education = {
       date: '2014 – abril 2026',
       title: 'Jefe de cocina y formador interno',
       place: 'Restaurante La Mafia, Córdoba',
-      text: 'Trabajo bajo procedimientos y estándares exigentes, además de formar al equipo.',
+      text: 'Trabajé bajo procedimientos y estándares exigentes, además de formar al equipo.',
     },
     {
       date: '2005',
