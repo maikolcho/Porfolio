@@ -119,8 +119,8 @@ export const projects = {
     {
       name: 'RecipeIA',
       description:
-        'App iOS en SwiftUI con arquitectura MVVM. Busca alimentos a partir de tus ingredientes consumiendo la API REST de Nutritionix con async/await, y permite crear recetas propias, organizarlas en categorías editables y guardar favoritas, con los datos guardados en el dispositivo.',
-      tags: ['Swift', 'SwiftUI', 'MVVM', 'API REST', 'iOS'],
+        'App iOS en SwiftUI con arquitectura MVVM que genera recetas con IA (API de Gemini) a partir de los ingredientes que tienes en casa. Permite guardar favoritas, crear recetas propias y organizarlas en categorías editables, con los datos guardados en el dispositivo.',
+      tags: ['Swift', 'SwiftUI', 'MVVM', 'IA', 'API REST', 'iOS'],
       // Capturas: sube imágenes a public/proyectos/ y añade aquí { src, alt }
       images: [
         { src: '/proyectos/recipeia-1.jpg', alt: 'RecipeIA: pantalla de búsqueda por ingredientes' },
