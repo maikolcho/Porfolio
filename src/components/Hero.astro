@@ -26,6 +26,7 @@ import { hero, site } from '../data/site';
 		<figure class="photo reveal">
 			<div class="ring">
 				<div class="inner">
+					<canvas class="rain mini" data-size="12" aria-hidden="true"></canvas>
 					<img src={hero.photo} alt={hero.photoAlt} width="400" height="400" fetchpriority="high" />
 				</div>
 			</div>
@@ -65,8 +66,17 @@ import { hero, site } from '../data/site';
 		background: conic-gradient(from 140deg, var(--accent), rgba(34, 224, 122, 0.08) 40%, var(--accent) 75%, rgba(34, 224, 122, 0.08));
 		box-shadow: 0 0 60px rgba(34, 224, 122, 0.22);
 	}
-	.inner { width: 100%; height: 100%; overflow: hidden; border-radius: 50%; border: 6px solid var(--bg); background: var(--bg); }
-	.ring img { display: block; width: 100%; height: 100%; object-fit: cover; transform: scale(1.14); }
+	.inner {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+		border-radius: 50%;
+		border: 6px solid var(--bg);
+		background: radial-gradient(circle at 50% 35%, #134d31 0%, #08130d 75%);
+	}
+	.rain.mini { opacity: 0.9; }
+	.ring img { display: block; width: 100%; height: 100%; position: relative; object-fit: cover; transform: scale(1.03); }
 	.photo figcaption { font-family: var(--mono); font-size: 0.85rem; color: var(--muted); }
 	.pin { color: var(--accent); margin-right: 0.4rem; }
 	@media (max-width: 860px) {
@@ -148,11 +158,12 @@ import { hero, site } from '../data/site';
 </script>
 
 <script>
-	const canvas = document.querySelector<HTMLCanvasElement>('.rain');
-	const ctx = canvas?.getContext('2d');
-	if (canvas && ctx && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+	const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+	document.querySelectorAll<HTMLCanvasElement>('.rain').forEach((canvas) => {
+		const ctx = canvas.getContext('2d');
+		if (!ctx || reduceMotion) return;
 		const chars = '01{}[]<>/;=$#ABCDEF';
-		const size = 16;
+		const size = Number(canvas.dataset.size ?? 16);
 		let cols = 0;
 		let drops: number[] = [];
 		let visible = true;
@@ -183,5 +194,5 @@ import { hero, site } from '../data/site';
 			}
 		};
 		requestAnimationFrame(draw);
-	}
+	});
 </script>

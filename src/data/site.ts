@@ -28,7 +28,7 @@ export const hero = {
     { icon: '▣', label: 'Operador de PC' },
     { icon: '⚿', label: 'Ciberseguridad' },
   ],
-  photo: '/avatar.jpg',
+  photo: '/avatar.png',
   photoAlt: 'Foto de Nelson Villalba',
   location: 'Córdoba, España',
   // Etiqueta de disponibilidad; pon '' para ocultarla
