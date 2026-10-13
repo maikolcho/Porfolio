@@ -110,25 +110,27 @@ export const projects = {
   title: 'Proyectos',
   items: [
     {
-      name: 'La Mafia',
-      description:
-        'App Android para el sector restauración, pensada para el restaurante La Mafia: carta digital, categorías de platos, reservas de mesa y acceso a plataformas de delivery (Glovo, Uber Eats, Just Eat).',
-      tags: ['Java', 'Android Studio', 'Android'],
-      code: 'https://github.com/maikolcho/La-Mafia',
-      demo: '', // deja vacío si no hay demo
-    },
-    {
       name: 'RecipeIA',
       description:
         'App iOS en SwiftUI con arquitectura MVVM que genera recetas con IA (API de Gemini) a partir de los ingredientes que tienes en casa. Permite guardar favoritas, crear recetas propias y organizarlas en categorías editables, con los datos guardados en el dispositivo.',
       tags: ['Swift', 'SwiftUI', 'MVVM', 'IA', 'API REST', 'iOS'],
       // Capturas: sube imágenes a public/proyectos/ y añade aquí { src, alt }
       images: [
-        { src: '/proyectos/recipeia-1.jpg', alt: 'RecipeIA: pantalla de búsqueda por ingredientes' },
-        { src: '/proyectos/recipeia-2.jpg', alt: 'RecipeIA: pantalla de categorías' },
+        { src: '/proyectos/recipeia-1.jpg', alt: 'RecipeIA: recetas generadas con IA a partir de los ingredientes' },
+        { src: '/proyectos/recipeia-2.jpg', alt: 'RecipeIA: receta con ingredientes y pasos numerados' },
+        { src: '/proyectos/recipeia-3.jpg', alt: 'RecipeIA: pantalla de recetas favoritas' },
+        { src: '/proyectos/recipeia-4.jpg', alt: 'RecipeIA: categorías editables' },
       ],
       code: 'https://github.com/maikolcho/RecipeIA',
       demo: '',
+    },
+    {
+      name: 'La Mafia',
+      description:
+        'App Android para el sector restauración, pensada para el restaurante La Mafia: carta digital, categorías de platos, reservas de mesa y acceso a plataformas de delivery (Glovo, Uber Eats, Just Eat).',
+      tags: ['Java', 'Android Studio', 'Android'],
+      code: 'https://github.com/maikolcho/La-Mafia',
+      demo: '', // deja vacío si no hay demo
     },
     {
       // TODO: revisa la descripción y las etiquetas, y añade el vídeo en demo

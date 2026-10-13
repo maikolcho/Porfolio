@@ -7,7 +7,7 @@ import { projects } from '../data/site';
 		<h2 class="section-title reveal">{projects.title}</h2>
 		<div class="grid">
 			{projects.items.map((p, i) => (
-				<article class="card reveal" style={`transition-delay:${i * 100}ms`}>
+				<article class={`card reveal${p.images?.length ? " featured" : ""}`} style={`transition-delay:${i * 100}ms`}>
 					{p.images && p.images.length > 0 && (
 						<div class="shots">
 							{p.images.map((img) => (
@@ -15,6 +15,7 @@ import { projects } from '../data/site';
 							))}
 						</div>
 					)}
+					<div class="body">
 					<h3>{p.name}</h3>
 					<p>{p.description}</p>
 					<ul class="tags">
@@ -24,6 +25,7 @@ import { projects } from '../data/site';
 						{p.code && <a href={p.code} target="_blank" rel="noopener noreferrer">{projects.labels.code} ↗</a>}
 						{p.demo && <a href={p.demo} target="_blank" rel="noopener noreferrer">{projects.labels.demo} ↗</a>}
 					</div>
+					</div>
 				</article>
 			))}
 		</div>
@@ -31,7 +33,12 @@ import { projects } from '../data/site';
 </section>
 
 <style>
-	.grid { display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+	.grid { display: grid; gap: 1.5rem; grid-template-columns: repeat(6, 1fr); }
+	.card { grid-column: span 3; }
+	@media (max-width: 760px) {
+		.grid { grid-template-columns: 1fr; }
+		.card { grid-column: 1 / -1; }
+	}
 	.card {
 		display: flex;
 		flex-direction: column;
@@ -42,6 +49,22 @@ import { projects } from '../data/site';
 		transition: border-color 0.25s, box-shadow 0.25s, transform 0.7s ease, opacity 0.7s ease;
 	}
 	.card:hover { border-color: var(--accent); box-shadow: 0 8px 30px rgba(34, 224, 122, 0.08); }
+	.body { display: flex; flex-direction: column; flex: 1; }
+	.featured {
+		grid-column: 1 / -1;
+		flex-direction: row;
+		align-items: center;
+		gap: clamp(1.5rem, 4vw, 3rem);
+	}
+	.featured .shots { margin: 0; padding: 0.25rem; flex: 0 0 auto; max-width: 100%; }
+	.featured .shots img { width: 150px; }
+	.featured h3 { font-size: 1.5rem; }
+	.featured p { flex: 0 1 auto; margin-bottom: 1.25rem; max-width: 60ch; }
+	@media (max-width: 900px) {
+		.featured { flex-direction: column; align-items: stretch; }
+		.featured .shots { overflow-x: auto; }
+		.featured .shots img { width: min(46%, 150px); }
+	}
 	.shots {
 		display: flex;
 		gap: 0.75rem;
