@@ -31,6 +31,13 @@ import { skills } from '../data/site';
 	.card:hover { border-color: var(--accent); }
 	h3 { font-size: 1.1rem; margin-bottom: 1.25rem; color: #fff; }
 	.ico { color: var(--accent); margin-right: 0.6rem; }
-	li { display: flex; gap: 0.6rem; padding: 0.35rem 0; color: var(--muted); font-size: 0.95rem; }
-	li::before { content: '▹'; color: var(--accent); }
+	ul { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+	li {
+		font-size: 0.85rem;
+		color: var(--text);
+		padding: 0.3rem 0.7rem;
+		border: 1px solid var(--border);
+		background: var(--surface);
+		border-radius: 6px;
+	}
 </style>

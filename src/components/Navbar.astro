@@ -30,6 +30,16 @@ import { nav, site } from '../data/site';
 	.links { display: flex; gap: 1.75rem; }
 	.links a { color: var(--muted); font-size: 0.92rem; transition: color 0.2s; }
 	.links a:hover, .links a.active { color: var(--accent); }
+	.links a:last-child {
+		color: var(--accent);
+		border: 1px solid rgba(34, 224, 122, 0.5);
+		padding: 0.4rem 0.95rem;
+		border-radius: 6px;
+		font-family: var(--mono);
+		font-size: 0.85rem;
+		transition: background 0.2s;
+	}
+	.links a:last-child:hover { background: var(--accent-dim); }
 	.toggle { display: none; background: none; border: 0; padding: 8px; cursor: pointer; }
 	.toggle span { display: block; width: 22px; height: 2px; background: var(--text); margin: 5px 0; transition: 0.25s; }
 	@keyframes blink { 50% { opacity: 0; } }
@@ -51,6 +61,7 @@ import { nav, site } from '../data/site';
 		}
 		.links.open { max-height: 320px; }
 		.links a { padding: 1rem 1.25rem; border-top: 1px solid var(--border); }
+		.links a:last-child { border: 0; border-top: 1px solid var(--border); border-radius: 0; padding: 1rem 1.25rem; font-family: var(--sans); font-size: 0.92rem; }
 	}
 </style>
 

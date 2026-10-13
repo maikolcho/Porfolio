@@ -28,6 +28,9 @@ export const hero = {
     { icon: '▣', label: 'Operador de PC' },
     { icon: '⚿', label: 'Ciberseguridad' },
   ],
+  photo: '/avatar.jpg',
+  photoAlt: 'Foto de Nelson Villalba',
+  location: 'Córdoba, España',
   // Etiqueta de disponibilidad; pon '' para ocultarla
   badge: 'Disponible para prácticas · 300 h financiadas',
   cta: { projects: 'Ver proyectos', contact: 'Contactar' },
@@ -35,8 +38,6 @@ export const hero = {
 
 export const about = {
   title: 'Sobre mí',
-  photo: '/avatar.jpg',
-  photoAlt: 'Foto de Nelson',
   // Usa **texto** para resaltar en negrita
   paragraphs: [
     'Soy Nelson, desarrollador de software formado en **Programación de Aplicaciones Multiplataforma en MasterD**, con interés en el desarrollo de aplicaciones móviles, la inteligencia artificial y la innovación tecnológica.',

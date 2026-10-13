@@ -4,7 +4,8 @@ import { hero, site } from '../data/site';
 
 <section id="inicio" class="hero">
 	<canvas class="rain" aria-hidden="true"></canvas>
-	<div class="container content">
+	<div class="container content layout">
+		<div class="text">
 		{hero.badge && <p class="badge"><span class="dot"></span>{hero.badge}</p>}
 		<p class="prompt">$ whoami</p>
 		<h1>{hero.greeting} <span class="name">{site.name}</span></h1>
@@ -21,6 +22,15 @@ import { hero, site } from '../data/site';
 			<a class="btn btn-primary" href="#proyectos">{hero.cta.projects}</a>
 			<a class="btn btn-ghost" href="#contacto">{hero.cta.contact}</a>
 		</div>
+		</div>
+		<figure class="photo reveal">
+			<div class="ring">
+				<div class="inner">
+					<img src={hero.photo} alt={hero.photoAlt} width="400" height="400" fetchpriority="high" />
+				</div>
+			</div>
+			<figcaption><span class="pin">⌖</span>{hero.location}</figcaption>
+		</figure>
 	</div>
 </section>
 
@@ -36,7 +46,7 @@ import { hero, site } from '../data/site';
 			radial-gradient(circle at 80% 20%, rgba(34, 224, 122, 0.08), transparent 45%),
 			linear-gradient(var(--bg), var(--bg));
 	}
-	.rain { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0.35; pointer-events: none; }
+	.rain { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0.18; pointer-events: none; }
 	.hero::after {
 		content: '';
 		position: absolute;
@@ -45,6 +55,25 @@ import { hero, site } from '../data/site';
 		background: radial-gradient(ellipse at 30% 50%, rgba(10, 14, 12, 0.85) 0%, rgba(10, 14, 12, 0.35) 70%);
 	}
 	.content { position: relative; z-index: 1; }
+	.layout { display: grid; grid-template-columns: 1.25fr 0.75fr; gap: clamp(2rem, 6vw, 5rem); align-items: center; }
+	.photo { margin: 0; display: grid; justify-items: center; gap: 1.1rem; }
+	.ring {
+		width: min(100%, 340px);
+		aspect-ratio: 1;
+		padding: 6px;
+		border-radius: 50%;
+		background: conic-gradient(from 140deg, var(--accent), rgba(34, 224, 122, 0.08) 40%, var(--accent) 75%, rgba(34, 224, 122, 0.08));
+		box-shadow: 0 0 60px rgba(34, 224, 122, 0.22);
+	}
+	.inner { width: 100%; height: 100%; overflow: hidden; border-radius: 50%; border: 6px solid var(--bg); background: var(--bg); }
+	.ring img { display: block; width: 100%; height: 100%; object-fit: cover; transform: scale(1.14); }
+	.photo figcaption { font-family: var(--mono); font-size: 0.85rem; color: var(--muted); }
+	.pin { color: var(--accent); margin-right: 0.4rem; }
+	@media (max-width: 860px) {
+		.layout { grid-template-columns: 1fr; }
+		.photo { order: -1; }
+		.ring { width: 200px; }
+	}
 	.badge {
 		display: inline-flex;
 		align-items: center;

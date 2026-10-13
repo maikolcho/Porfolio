@@ -1,18 +1,27 @@
 ---
-import { footer } from '../data/site';
+import { footer, contact, site } from '../data/site';
 ---
 
 <footer>
-	<div class="container">{footer.text}</div>
+	<div class="container row">
+		<span>{footer.text}</span>
+		<nav class="links" aria-label="Redes">
+			{contact.socials.map((s) => <a href={s.href} target="_blank" rel="noopener noreferrer">{s.label}</a>)}
+			<a href={`mailto:${site.email}`}>Email</a>
+		</nav>
+	</div>
 </footer>
 
 <style>
 	footer {
-		padding: 1.75rem 0;
+		padding: 1.5rem 0;
 		border-top: 1px solid var(--border);
-		text-align: center;
 		font-family: var(--mono);
 		font-size: 0.8rem;
 		color: var(--muted);
 	}
+	.row { display: flex; flex-wrap: wrap; gap: 0.75rem 1.5rem; justify-content: space-between; align-items: center; }
+	.links { display: flex; gap: 1.25rem; }
+	.links a { color: var(--muted); padding: 0.5rem 0; transition: color 0.2s; }
+	.links a:hover { color: var(--accent); }
 </style>

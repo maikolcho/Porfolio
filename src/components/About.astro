@@ -10,7 +10,6 @@ import { about } from '../data/site';
 				{about.paragraphs.map((p) => <p set:html={p.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')} />)}
 			</div>
 			<div class="side reveal">
-				<div class="photo"><img src={about.photo} alt={about.photoAlt} width="180" height="180" /></div>
 				<dl class="facts">
 				{about.facts.map((f) => (
 					<div><dt>{f.label}</dt><dd>{f.value}</dd></div>
@@ -26,15 +25,6 @@ import { about } from '../data/site';
 	.text p { color: var(--muted); font-size: 1.05rem; }
 	.text :global(strong) { color: var(--accent); font-weight: 600; }
 	.side { display: grid; gap: 1.5rem; justify-items: center; }
-	.photo {
-		width: 180px;
-		height: 180px;
-		border-radius: 50%;
-		overflow: hidden;
-		border: 2px solid var(--accent);
-		box-shadow: 0 0 30px rgba(34, 224, 122, 0.2);
-	}
-	.photo img { width: 100%; height: 100%; object-fit: cover; transform: scale(1.1); display: block; }
 	.facts {
 		width: 100%;
 		margin: 0;
