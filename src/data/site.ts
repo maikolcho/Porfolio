@@ -157,11 +157,19 @@ export const projects = {
       demo: '', // deja vacío si no hay demo
     },
     {
-      // TODO: revisa la descripción y las etiquetas, y añade el vídeo en demo
-      name: 'Agente IA para abogados',
+      name: 'Agente automatizado para despachos de abogados',
       description:
-        'Agente de inteligencia artificial que atiende consultas por WhatsApp para despachos de abogados, automatizado con flujos de n8n.',
-      tags: ['IA', 'n8n', 'WhatsApp', 'Node.js'],
+        'Sistema que atiende a los clientes de un despacho por WhatsApp: pide su consentimiento RGPD, ofrece huecos libres de Google Calendar, cobra la consulta con Stripe y confirma la cita. Diseñado con enfoque de ciberseguridad: firmas HMAC en los webhooks, filtro que elimina datos personales antes de guardar nada, logs estructurados para un SIEM y panel de administración. Backend en Node.js orquestado con n8n.',
+      tags: ['Node.js', 'n8n', 'WhatsApp API', 'Stripe', 'Google Calendar', 'RGPD', 'Ciberseguridad'],
+      images: [
+        { src: '/proyectos/agente-whatsapp.jpg', alt: 'Agente para abogados: conversación de WhatsApp con consentimiento RGPD, reserva de cita y pago' },
+      ],
+      gallery: [
+        { src: '/proyectos/agente-citas.jpg', alt: 'Panel de administración: citas agendadas y estado de pagos' },
+        { src: '/proyectos/agente-logs.jpg', alt: 'Consola de logs de seguridad en tiempo real, con un webhook de firma falsa rechazado' },
+        { src: '/proyectos/agente-rgpd.jpg', alt: 'Filtro RGPD: elimina DNI, email, teléfono y nombre antes de guardar o procesar' },
+      ],
+      caption: 'Capturas de la demo con datos ficticios, Stripe en modo test.',
       code: '',
       demo: '',
     },
