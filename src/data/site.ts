@@ -48,7 +48,7 @@ export const about = {
   facts: [
     { label: 'Ubicación', value: 'Córdoba, España' },
     { label: 'Enfoque', value: 'Desarrollo de software · Inteligencia artificial · Ciberseguridad' },
-    { label: 'Tecnologías', value: 'Java · Kotlin · JavaScript · Python · MySQL · Git · GitHub' },
+    { label: 'Tecnologías', value: 'Java · Kotlin · JavaScript · Python · MySQL · Linux · Git · GitHub' },
     { label: 'Formación actual', value: 'Ethical Hacking y ciberseguridad' },
     { label: 'Idiomas', value: 'Español (nativo) · Inglés A2 · Portugués A2' },
   ],
@@ -70,7 +70,7 @@ export const skills = {
     {
       name: 'Soporte de PC',
       icon: '▣',
-      items: ['Windows y macOS', 'Instalación y mantenimiento', 'Resolución de incidencias', 'Copias de seguridad'],
+      items: ['Windows, macOS y Linux', 'Instalación y mantenimiento', 'Resolución de incidencias', 'Copias de seguridad'],
     },
   ],
 };
