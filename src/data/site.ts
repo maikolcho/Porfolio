@@ -127,9 +127,15 @@ export const projects = {
     {
       name: 'La Mafia',
       description:
-        'App Android para el sector restauración, pensada para el restaurante La Mafia: carta digital, categorías de platos, reservas de mesa y acceso a plataformas de delivery (Glovo, Uber Eats, Just Eat).',
-      tags: ['Java', 'Android Studio', 'Android'],
-      code: 'https://github.com/maikolcho/La-Mafia',
+        'App nativa Android para el restaurante italiano La Mafia (Córdoba), hecha con Java y Kotlin. Incluye vídeo de bienvenida, reserva de mesa, pedidos a domicilio (Glovo, Just Eat, Uber Eats), carta digital, menús especiales, galería de fotos del local y llamada directa al restaurante. La navegación usa una barra inferior con fragments.',
+      tags: ['Java', 'Kotlin', 'Android', 'Material Components', 'Glide', 'Google Maps'],
+      images: [
+        { src: '/proyectos/lamafia-1.jpg', alt: 'La Mafia: pantalla de inicio con reserva y pedidos online' },
+        { src: '/proyectos/lamafia-2.jpg', alt: 'La Mafia: información del restaurante' },
+        { src: '/proyectos/lamafia-3.jpg', alt: 'La Mafia: menús especiales para compartir' },
+        { src: '/proyectos/lamafia-4.jpg', alt: 'La Mafia: galería de fotos del local' },
+      ],
+      code: 'https://github.com/maikolcho/la-mafia-app',
       demo: '', // deja vacío si no hay demo
     },
     {
