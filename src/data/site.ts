@@ -33,7 +33,7 @@ export const hero = {
   location: 'Córdoba, España',
   // Etiqueta de disponibilidad; pon '' para ocultarla
   badge: 'Disponible para prácticas · 300 h financiadas',
-  cta: { projects: 'Ver proyectos', contact: 'Contactar' },
+  cta: { projects: 'Ver proyectos', contact: 'Contactar', cv: 'Descargar CV' },
 };
 
 export const about = {
@@ -94,7 +94,25 @@ export const education = {
       date: '2014 – abril 2026',
       title: 'Jefe de cocina y formador interno',
       place: 'Restaurante La Mafia, Córdoba',
-      text: 'Trabajé bajo procedimientos y estándares exigentes, además de formar al equipo.',
+      text: 'Dirigí la cocina trabajando bajo procedimientos y estándares de calidad exigentes, y formé al equipo y a las nuevas incorporaciones. Doce años de responsabilidad, trabajo bajo presión y trato con personas.',
+    },
+    {
+      date: '2014 – abril 2026',
+      title: 'Responsable de informática y soporte técnico',
+      place: 'Restaurante La Mafia, Córdoba · junto a mi puesto en cocina',
+      text: 'Me encargaba de toda la parte tecnológica del local: mantenimiento de ordenadores y equipos, configuración y revisión de la red, y resolución de las incidencias técnicas del día a día para que el negocio no se parara.',
+    },
+    {
+      date: '2008 – 2014',
+      title: 'Ayudante de cocina',
+      place: 'Sociedad Plateros',
+      text: 'Seis años en cocina trabajando bajo procedimientos y estándares exigentes, la base de la disciplina y el trabajo en equipo que llevé después a La Mafia.',
+    },
+    {
+      date: '2006 – 2007',
+      title: 'Prácticas de soporte técnico e informática',
+      place: 'Un año',
+      text: 'Prácticas orientadas al soporte técnico, la gestión básica de sistemas y la resolución de incidencias en entornos controlados.',
     },
     {
       date: '2005',
