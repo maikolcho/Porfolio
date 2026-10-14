@@ -170,7 +170,7 @@ export const projects = {
         { src: '/proyectos/agente-rgpd.jpg', alt: 'Filtro RGPD: elimina DNI, email, teléfono y nombre antes de guardar o procesar' },
       ],
       caption: 'Capturas de la demo con datos ficticios, Stripe en modo test.',
-      code: '',
+      code: 'https://github.com/maikolcho/agente-abogados',
       demo: '',
     },
   ],
