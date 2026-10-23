@@ -159,7 +159,7 @@ export const projects = {
     {
       name: 'La Famiglia',
       description:
-        'App Flutter multiplataforma (Android/iOS) para el restaurante La Famiglia (antes La Mafia) en Córdoba, construida replicando la web real del negocio. Incluye reserva de mesa, pedidos a domicilio (Glovo, Uber Eats, Just Eat), carta digital con fotos de los platos, programa de fidelización Il Club, tarjeta regalo, franquicias, blog y mapa de ubicación con Google Maps.',
+        'App Flutter multiplataforma (Android/iOS) para un restaurante italiano de Córdoba, con arquitectura por pantallas y widgets reutilizables. Incluye reserva de mesa, pedidos a domicilio (Glovo, Uber Eats, Just Eat), carta digital con fotos de los platos, programa de fidelización por niveles, tarjeta regalo, sección de franquicias, blog y mapa de ubicación con Google Maps. Proyecto personal para practicar desarrollo multiplataforma, complementario a la app nativa Android La Mafia.',
       tags: ['Flutter', 'Dart', 'Android', 'iOS', 'Google Maps', 'Material Design'],
       images: [
         { src: '/proyectos/lafamiglia-1.jpg', alt: 'La Famiglia: pantalla de inicio con reserva y pedidos online' },
