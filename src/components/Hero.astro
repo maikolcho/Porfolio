@@ -10,7 +10,7 @@ import { hero, site } from '../data/site';
 		<p class="prompt">$ whoami</p>
 		<h1>{hero.greeting} <span class="name">{site.name}</span></h1>
 		<p class="role" data-roles={JSON.stringify(hero.roles)}>
-			<span class="typed">{hero.roles[0]}</span><span class="caret">|</span>
+			<span class="typed">{hero.roles[0]}</span>
 		</p>
 		<p class="intro">{hero.intro}</p>
 		<ul class="profiles">

@@ -11,7 +11,7 @@ export const site = {
 
 export const nav = [
   { label: 'Sobre mí', href: '#sobre-mi' },
-  { label: 'Skills', href: '#skills' },
+  { label: 'Habilidades', href: '#skills' },
   { label: 'Formación', href: '#formacion' },
   { label: 'Proyectos', href: '#proyectos' },
   { label: 'Contacto', href: '#contacto' },
