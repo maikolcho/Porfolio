@@ -157,6 +157,20 @@ export const projects = {
       demo: '', // deja vacío si no hay demo
     },
     {
+      name: 'La Famiglia',
+      description:
+        'App Flutter multiplataforma (Android/iOS) para el restaurante La Famiglia (antes La Mafia) en Córdoba, construida replicando la web real del negocio. Incluye reserva de mesa, pedidos a domicilio (Glovo, Uber Eats, Just Eat), carta digital con fotos de los platos, programa de fidelización Il Club, tarjeta regalo, franquicias, blog y mapa de ubicación con Google Maps.',
+      tags: ['Flutter', 'Dart', 'Android', 'iOS', 'Google Maps', 'Material Design'],
+      images: [
+        { src: '/proyectos/lafamiglia-1.jpg', alt: 'La Famiglia: pantalla de inicio con reserva y pedidos online' },
+        { src: '/proyectos/lafamiglia-2.jpg', alt: 'La Famiglia: carta digital con fotos de los platos' },
+        { src: '/proyectos/lafamiglia-3.jpg', alt: 'La Famiglia: programa de fidelización Il Club' },
+        { src: '/proyectos/lafamiglia-4.jpg', alt: 'La Famiglia: información del restaurante' },
+      ],
+      code: 'https://github.com/maikolcho/la-famiglia-app-',
+      demo: '',
+    },
+    {
       name: 'Agente automatizado para despachos de abogados',
       description:
         'Sistema que atiende a los clientes de un despacho por WhatsApp: pide su consentimiento RGPD, ofrece huecos libres de Google Calendar, cobra la consulta con Stripe y confirma la cita. Diseñado con enfoque de ciberseguridad: firmas HMAC en los webhooks, filtro que elimina datos personales antes de guardar nada, logs estructurados para un SIEM y panel de administración. Backend en Node.js orquestado con n8n.',
