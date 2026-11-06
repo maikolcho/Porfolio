@@ -20,7 +20,7 @@ export const nav = [
 export const hero = {
   greeting: 'Hola, soy',
   // Frases que se escriben en bucle en la portada
-  roles: ['Desarrollador Android & iOS', 'Estudiante de Ethical Hacking', 'Apps con IA'],
+  roles: ['Desarrollador Android e iOS', 'Estudiante de Ethical Hacking'],
   intro:
     'Construyo aplicaciones, resuelvo problemas de sistemas y aprendo a proteger lo que otros construyen.',
   profiles: [
