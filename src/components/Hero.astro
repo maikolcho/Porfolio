@@ -81,9 +81,14 @@ import { hero, site } from '../data/site';
 	.photo figcaption { font-family: var(--mono); font-size: 0.85rem; color: var(--muted); }
 	.pin { color: var(--accent); margin-right: 0.4rem; }
 	@media (max-width: 860px) {
-		.layout { grid-template-columns: 1fr; }
+		.layout { grid-template-columns: minmax(0, 1fr); }
 		.photo { order: -1; }
 		.ring { width: 200px; }
+	}
+	@media (max-width: 480px) {
+		h1 { font-size: 9vw; }
+		.badge { max-width: 100%; white-space: normal; line-height: 1.4; }
+		.profiles li { font-size: 0.78rem; }
 	}
 	.badge {
 		display: inline-flex;
