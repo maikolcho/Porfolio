@@ -5,7 +5,7 @@ export const site = {
   fullName: 'Nelson Villalba Vergara',
   title: 'Nelson | Portfolio',
   description:
-    'Portfolio de Nelson: programador, operador de PC y estudiante de ciberseguridad.',
+    'Portfolio de Nelson Villalba: desarrollador de apps Android e iOS y estudiante de Ethical Hacking y ciberseguridad.',
   email: 'nelson_ariel@hotmail.es',
 };
 
@@ -20,13 +20,13 @@ export const nav = [
 export const hero = {
   greeting: 'Hola, soy',
   // Frases que se escriben en bucle en la portada
-  roles: ['Programador', 'Operador de PC', 'Estudiante de ciberseguridad'],
+  roles: ['Desarrollador Android & iOS', 'Estudiante de Ethical Hacking', 'Apps con IA'],
   intro:
     'Construyo aplicaciones, resuelvo problemas de sistemas y aprendo a proteger lo que otros construyen.',
   profiles: [
-    { icon: '</>', label: 'Programador' },
-    { icon: '▣', label: 'Operador de PC' },
+    { icon: '</>', label: 'Android & iOS' },
     { icon: '⚿', label: 'Ciberseguridad' },
+    { icon: '✦', label: 'IA' },
   ],
   photo: '/avatar.png',
   photoAlt: 'Foto de Nelson Villalba',
@@ -48,7 +48,7 @@ export const about = {
   facts: [
     { label: 'Ubicación', value: 'Córdoba, España' },
     { label: 'Enfoque', value: 'Desarrollo de software · Inteligencia artificial · Ciberseguridad' },
-    { label: 'Tecnologías', value: 'Java · Kotlin · JavaScript · Python · MySQL · Linux · Git · GitHub' },
+    { label: 'Tecnologías', value: 'Kotlin · Java · Swift · Flutter · Node.js · Python · MySQL · Linux · Git · GitHub' },
     { label: 'Formación actual', value: 'Ethical Hacking y ciberseguridad' },
     { label: 'Idiomas', value: 'Español (nativo) · Inglés A2 · Portugués A2' },
   ],
@@ -60,12 +60,12 @@ export const skills = {
     {
       name: 'Programación',
       icon: '</>',
-      items: ['Java', 'Kotlin', 'JavaScript', 'Python', 'Swift y SwiftUI', 'MySQL', 'Node.js', 'n8n', 'Git y GitHub'],
+      items: ['Kotlin', 'Java', 'Swift y SwiftUI', 'Flutter y Dart', 'Firebase', 'JavaScript', 'Node.js', 'Python', 'MySQL', 'n8n', 'Git y GitHub'],
     },
     {
       name: 'Ciberseguridad',
       icon: '⚿',
-      items: ['Ethical Hacking (en formación)', 'Seguridad de sistemas', 'Seguridad de redes', 'Seguridad de aplicaciones'],
+      items: ['Ethical Hacking (en formación)', 'Kali Linux', 'Nmap', 'Burp Suite', 'Wireshark', 'Metasploit', 'OWASP Top 10'],
     },
     {
       name: 'Soporte de PC',
@@ -111,13 +111,13 @@ export const education = {
     {
       date: '2006 – 2007',
       title: 'Prácticas de soporte técnico e informática',
-      place: 'Un año',
+      place: 'Prácticas formativas · 1 año',
       text: 'Prácticas orientadas al soporte técnico, la gestión básica de sistemas y la resolución de incidencias en entornos controlados.',
     },
     {
       date: '2005',
       title: 'Curso de Operador de PC',
-      place: '300 horas',
+      place: 'ASEI – Academia y Sistema de Estudio Informático · Encarnación (Paraguay) · 300 horas',
       text: 'Base en soporte técnico, gestión de sistemas y resolución de incidencias.',
     },
   ],
