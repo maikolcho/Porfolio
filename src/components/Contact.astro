@@ -6,8 +6,10 @@ import { contact, site } from '../data/site';
 	<div class="container center">
 		<h2 class="section-title reveal">{contact.title}</h2>
 		<p class="reveal">{contact.text}</p>
-		<a class="btn btn-primary reveal" href={`mailto:${site.email}`}>{site.email}</a>
-		<a class="btn btn-ghost reveal" href="tel:+34647038987">647 038 987</a>
+		<div class="actions reveal">
+			<a class="btn btn-primary" href={`mailto:${site.email}`}>{site.email}</a>
+			<a class="btn btn-ghost" href="tel:+34647038987">647 038 987</a>
+		</div>
 		<ul class="socials reveal">
 			{contact.socials.map((s) => (
 				<li><a href={s.href} target="_blank" rel="noopener noreferrer">{s.label} ↗</a></li>
@@ -21,6 +23,7 @@ import { contact, site } from '../data/site';
 	.center { text-align: center; }
 	p { color: var(--muted); max-width: 50ch; margin: 0 auto 2rem; }
 	.btn { word-break: break-all; }
+	.actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.75rem; }
 	.socials { display: flex; justify-content: center; flex-wrap: wrap; gap: 1.75rem; margin-top: 2rem; font-family: var(--mono); }
 	.socials a { display: inline-block; padding: 0.7rem 0.25rem; }
 	.socials a:hover { text-decoration: underline; }
