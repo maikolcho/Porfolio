@@ -40,10 +40,9 @@ export const about = {
   title: 'Sobre mí',
   // Usa **texto** para resaltar en negrita
   paragraphs: [
-    'Soy Nelson, desarrollador de software formado en **Programación de Aplicaciones Multiplataforma en MasterD**, con interés en el desarrollo de aplicaciones móviles, la inteligencia artificial y la innovación tecnológica.',
-    'Durante mi formación he trabajado con tecnologías como Java, Kotlin, JavaScript y Python, además de bases de datos MySQL y herramientas como Git y GitHub. Me gusta llevar los conocimientos a la práctica mediante proyectos que me permitan experimentar, resolver problemas y desarrollar nuevas habilidades.',
-    'Actualmente continúo formándome en **Ethical Hacking y ciberseguridad**, ampliando mi visión del mundo tecnológico y aprendiendo sobre la seguridad de sistemas, redes y aplicaciones.',
-    'Me considero una persona curiosa, autodidacta y comprometida con la mejora continua. Disfruto investigando nuevas tecnologías, explorando ideas y convirtiéndolas en proyectos funcionales. Mi objetivo es seguir creciendo como profesional, participar en proyectos reales y combinar el desarrollo de software con las posibilidades que ofrecen la inteligencia artificial y la ciberseguridad.',
+    'Soy Nelson, desarrollador de **aplicaciones móviles nativas para Android (Java, Kotlin) e iOS (Swift, SwiftUI)**, formado en Programación de Aplicaciones Multiplataforma en MasterD. He desarrollado proyectos completos de principio a fin: una app iOS con IA (Gemini), una app nativa Android, una app multiplataforma en Flutter y un agente de WhatsApp diseñado con enfoque de seguridad y RGPD.',
+    'Actualmente curso el **Curso Superior en Ethical Hacking** y trabajo con herramientas como Kali Linux, Nmap, Burp Suite, Wireshark y Metasploit. Además trabajo con APIs de inteligencia artificial, como Gemini, y he creado agentes que automatizan procesos.',
+    'Antes de dedicarme al desarrollo trabajé más de 12 años en el restaurante La Mafia, donde además de dirigir la cocina me encargaba del soporte técnico, los equipos y la red del local. Busco **prácticas o un primer empleo** en desarrollo móvil o ciberseguridad, y dispongo de **300 horas de prácticas financiadas**, sin coste para la empresa.',
   ],
   facts: [
     { label: 'Ubicación', value: 'Córdoba, España' },

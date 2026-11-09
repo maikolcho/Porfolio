@@ -7,6 +7,7 @@ import { contact, site } from '../data/site';
 		<h2 class="section-title reveal">{contact.title}</h2>
 		<p class="reveal">{contact.text}</p>
 		<a class="btn btn-primary reveal" href={`mailto:${site.email}`}>{site.email}</a>
+		<a class="btn btn-ghost reveal" href="tel:+34647038987">647 038 987</a>
 		<ul class="socials reveal">
 			{contact.socials.map((s) => (
 				<li><a href={s.href} target="_blank" rel="noopener noreferrer">{s.label} ↗</a></li>
