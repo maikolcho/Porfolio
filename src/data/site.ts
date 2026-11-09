@@ -109,9 +109,9 @@ export const education = {
       text: 'Seis años en cocina trabajando bajo procedimientos y estándares exigentes, la base de la disciplina y el trabajo en equipo que llevé después a La Mafia.',
     },
     {
-      date: '2006 – 2007',
+      date: '2006',
       title: 'Prácticas de soporte técnico e informática',
-      place: 'Prácticas formativas · 1 año',
+      place: 'Prácticas formativas · 3 meses',
       text: 'Prácticas orientadas al soporte técnico, la gestión básica de sistemas y la resolución de incidencias en entornos controlados.',
     },
     {
