@@ -42,7 +42,7 @@ export const about = {
   paragraphs: [
     'Soy Nelson, desarrollador de **aplicaciones móviles nativas para Android (Java, Kotlin) e iOS (Swift, SwiftUI)**, formado en Programación de Aplicaciones Multiplataforma en MasterD. He desarrollado proyectos completos de principio a fin: una app iOS con IA (Gemini), una app nativa Android, una app multiplataforma en Flutter y un agente de WhatsApp diseñado con enfoque de seguridad y RGPD.',
     'Actualmente curso el **Curso Superior en Ethical Hacking** y trabajo con herramientas como Kali Linux, Nmap, Burp Suite, Wireshark y Metasploit. Manejo con soltura asistentes de IA como Claude, ChatGPT y Gemini, tanto para programar como para estudiar y automatizar tareas, y he integrado la API de Gemini en una de mis apps.',
-    'Antes de dedicarme al desarrollo trabajé más de 12 años en el restaurante La Mafia, donde además de dirigir la cocina me encargaba del soporte técnico, los equipos y la red del local. Busco **prácticas o un primer empleo** en desarrollo móvil o ciberseguridad, y dispongo de **300 horas de prácticas financiadas**, sin coste para la empresa.',
+    'Antes de dedicarme al desarrollo trabajé más de 12 años en el restaurante La Mafia, donde además de dirigir la cocina me encargaba del soporte técnico, los equipos y la red del local. Trabajo con rigor y perseverancia: ante un problema que no se resuelve a la primera, analizo las causas, estudio la documentación y no lo dejo hasta entender qué ocurre y dejarlo funcionando. Busco **prácticas o un primer empleo** en desarrollo móvil o ciberseguridad, y dispongo de **300 horas de prácticas financiadas**, sin coste para la empresa.',
   ],
   facts: [
     { label: 'Ubicación', value: 'Córdoba, España' },
